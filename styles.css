@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+:root {
+	--White: hsl(0, 0%, 100%);
+	--Light-pink: hsl(275, 100%, 97%);
+	--Grayish-purple: hsl(292, 16%, 49%);
+	--Dark-purple: hsl(292, 42%, 14%);
+}
+
+body {
+	background-color: var(--Light-pink);
+	background-repeat: no-repeat;
+	/* background-size: 400px 400px; */
+	min-height: 100vh;
+	font-family: 'Work Sans', sans-serif;
+	font-size: 15px;
+	line-height: 1;
+	display: grid;
+	place-content: center;
+	/* height: 200px; */
+}
+
+header {
+	background: url(./assets/images/background-pattern-desktop.svg) center / cover no-repeat;
+	height: 19rem;
+	width: 100%;
+	position: absolute;
+}
+
+.head {
+	display: flex;
+	align-items: center;
+	padding: 5px 0;
+
+}
+
+main {
+	position: relative;
+	/* top: 200px; */
+	width: 600px;
+	margin: -1vh auto 0 auto;
+	padding: 40px;
+	background-color: var(--White);
+	border-radius: .5rem;
+	box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+	font-weight: 700;
+	color: var(--Dark-purple);
+	padding-left: 10px;
+}
+
+h2 {
+	font-size: 1rem;
+	color: var(--Dark-purple);
+	padding: 1.5rem 0;
+}
+
+.info {
+	padding-bottom: 15px;
+	border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+	width: 100%;
+
+}
+
+.toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 500px;
+	margin: 0;
+	/* border-bottom: .5px solid rgba(0, 0, 0, 0.1); */
+}
+
+.modal {
+	border-bottom: .5px solid rgba(0, 0, 0, 0.1);
+}
+
+.hidden,
+.close {
+	display: none;
+}
+
+.info p {
+	display: none;
+	color: var(--Grayish-purple);
+	padding: 3px 0;
+	line-height: 1.2rem;
+	font-weight: 400;
+}
+
+.info:last-of-type {
+	border: none;
+}
+
+.toggle img:hover {
+	cursor: pointer;
+}
+
+.attribution {
+	position: absolute;
+	font-size: 1rem;
+	text-align: center;
+	padding-top: 90px
+}
+
+.attribution a {
+	font-weight: 700;
+	font-family: 'Work Sans', sans-serif;
+	text-decoration: none;
+	color: var(--Dark-purple);
+}
+
+@media(max-width: 600px) {
+	main {
+		width: 80%;
+		margin: -1vh auto 0 auto;
+	}
+
+	header {
+		background: url(./assets/images/background-pattern-mobile.svg) repeat center;
+		width: 100%;
+		margin: auto;
+	}
+
+	.modal,
+	.toggle {
+		width: 95%;
+		margin: auto;
+	}
+
+	.toggle {
+		margin: 0 0;
+	}
+}
