@@ -126,9 +126,10 @@ h2 {
 	}
 
 	header {
-		background: url(./assets/images/background-pattern-mobile.svg) repeat center;
+		background: url(./assets/images/background-pattern-mobile.svg) no-repeat;
 		width: 100%;
 		margin: auto;
+		background-size: cover;
 	}
 
 	.modal,
